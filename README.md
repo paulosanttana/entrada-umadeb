@@ -6,3 +6,7 @@ Contador entrada UMADEB
 2. Leitor QR Code para alimentação
 
 ---
+
+#Config
+
+- Node JS 18
