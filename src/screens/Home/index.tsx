@@ -29,9 +29,9 @@ export function Home() {
 
   const navigation = useNavigation();
 
-  function openScreen() {
-    navigation.navigate("Qrcode");
-  }
+  // function openScreen() {
+  //   navigation.navigate("Qrcode");
+  // }
 
   useEffect(() => {
     const fetchUevents = async () => {
@@ -58,7 +58,7 @@ export function Home() {
   }, []);
 
   function handleParticipantAdd() {
-    let dataCheck = new Date();
+    let dataCheck: Date = new Date();
     setTimer(dataAtualFormatada(dataCheck));
     setCounter(counter + 1);
     console.log(counter, timer);
@@ -66,7 +66,7 @@ export function Home() {
 
   return (
     <View style={styles.container}>
-      <Button title="Leitor QR Code" onPress={openScreen} />
+      {/* <Button title="Leitor QR Code" onPress={openScreen} /> */}
       <Text style={styles.txtType}>ENTRADA</Text>
       <Text
         style={styles.txtUmadeb}

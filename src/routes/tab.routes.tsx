@@ -9,9 +9,10 @@ export function TabRoutes() {
   return (
     <Navigator
       screenOptions={{
-        tabBarActiveTintColor: "#00337C",
+        tabBarActiveTintColor: "#fff",
         tabBarInactiveTintColor: "grey",
         headerShown: false, //desabilita visualização do texto em todas as paginas
+        tabBarStyle: { backgroundColor: "#021838" },
       }}
     >
       <Screen

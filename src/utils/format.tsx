@@ -6,7 +6,7 @@ export const formatDateSelect = (dateFormat: any) => {
   return `${dia}/${mes}/${ano}`;
 };
 
-export function dataAtualFormatada() {
+export function dataAtualFormatada(date: Date) {
   var date = new Date(),
     // var date = dateInicial,
     dia = date.getDate().toString().padStart(2, "0"),
