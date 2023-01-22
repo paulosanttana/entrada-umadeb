@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
-import { Text, TouchableOpacity, View } from "react-native";
+import { Button, Text, TouchableOpacity, View } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import { styles } from "./styles";
 import { api } from "../../services/api";
 import { DATAZERO } from "../../utils/constantes";
-
-// const DATAZERO = {
-//   DATE_ZERO: "00/00/0000 00:00:00",
-// };
+import { useNavigation } from "@react-navigation/native";
+import { dataAtualFormatada, formatDateSelect } from "../../utils/format";
 
 export interface Event {
   Ativo: boolean | undefined;
@@ -21,26 +19,6 @@ export interface Evento {
   data: Event[];
 }
 
-function dataAtualFormatada() {
-  var date = new Date(),
-    // var date = dateInicial,
-    dia = date.getDate().toString().padStart(2, "0"),
-    mes = (date.getMonth() + 1).toString().padStart(2, "0"), //+1 pois no getMonth Janeiro começa com zero.
-    ano = date.getFullYear(),
-    hh = date.getHours(),
-    mm = date.getMinutes(),
-    ss = date.getSeconds();
-  return `${dia}/${mes}/${ano} ${hh}:${mm}:${ss}`;
-}
-
-const formatDateSelect = (dateFormat: any) => {
-  var dateDay = dateFormat?.split("T")[0];
-  const dia = dateDay?.split("-").reverse()[0];
-  const mes = dateDay?.split("-").reverse()[1];
-  const ano = dateDay?.substring(0, 4);
-  return `${dia}/${mes}/${ano}`;
-};
-
 export function Home() {
   const [counter, setCounter] = useState(0);
   const [timer, setTimer] = useState("");
@@ -48,6 +26,12 @@ export function Home() {
   const [eventos, setEventos] = useState<any>([]);
   const [eventoPrincipal, setEventoPrincipal] = useState<any>([]);
   const [selected, setSelected] = useState([]);
+
+  const navigation = useNavigation();
+
+  function openScreen() {
+    navigation.navigate("QRCode");
+  }
 
   useEffect(() => {
     const fetchUevents = async () => {
@@ -82,6 +66,7 @@ export function Home() {
 
   return (
     <View style={styles.container}>
+      <Button title="Leitor QR Code" onPress={openScreen} />
       <Text style={styles.txtType}>ENTRADA</Text>
       <Text
         style={styles.txtUmadeb}

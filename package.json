@@ -12,6 +12,8 @@
     "@expo-google-fonts/roboto": "^0.2.2",
     "@expo/webpack-config": "^0.17.2",
     "@react-native-picker/picker": "^2.4.8",
+    "@react-navigation/native": "^6.1.2",
+    "@react-navigation/native-stack": "^6.9.8",
     "axios": "^1.2.3",
     "expo": "~47.0.12",
     "expo-font": "~11.0.1",
@@ -21,6 +23,8 @@
     "react-native": "0.70.5",
     "react-native-axios": "^0.17.1",
     "react-native-dropdown-picker": "^5.4.4",
+    "react-native-safe-area-context": "^4.4.1",
+    "react-native-screens": "~3.18.0",
     "react-native-web": "~0.18.9",
     "styled-components": "^5.3.6"
   },

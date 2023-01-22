@@ -1,6 +1,7 @@
-import { ActivityIndicator, StatusBar } from "react-native";
-import { Home } from "./src/screens/Home";
-import { ThemeConsumer, ThemeProvider } from "styled-components";
+import { StatusBar } from "react-native";
+
+import { ThemeProvider } from "styled-components";
+import { Routes } from "./src/routes";
 
 import theme from "./src/theme";
 
@@ -9,8 +10,7 @@ export default function App() {
     <>
       <ThemeProvider theme={theme}>
         <StatusBar />
-        {/* { fontLoaded ? <Home /> : ActivityIndicator} */}
-        <Home />
+        <Routes />
       </ThemeProvider>
     </>
   );
