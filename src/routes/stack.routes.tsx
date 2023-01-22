@@ -7,9 +7,18 @@ const { Screen, Navigator } = createNativeStackNavigator();
 export function StackRoutes() {
   return (
     <Navigator>
-      <Screen name="Entrada" component={Home} />
+      <Screen name="Home" options={{ headerShown: false }} component={Home} />
 
-      <Screen name="QRCode" component={Qrcode} />
+      <Screen
+        name="Qrcode"
+        options={{
+          title: "Scanear QR Code",
+          headerTitleAlign: "center",
+          headerTintColor: "#fff",
+          headerStyle: { backgroundColor: "#00337C" },
+        }}
+        component={Qrcode}
+      />
     </Navigator>
   );
 }

@@ -30,7 +30,7 @@ export function Home() {
   const navigation = useNavigation();
 
   function openScreen() {
-    navigation.navigate("QRCode");
+    navigation.navigate("Qrcode");
   }
 
   useEffect(() => {

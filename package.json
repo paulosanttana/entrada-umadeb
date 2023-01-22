@@ -12,6 +12,7 @@
     "@expo-google-fonts/roboto": "^0.2.2",
     "@expo/webpack-config": "^0.17.2",
     "@react-native-picker/picker": "^2.4.8",
+    "@react-navigation/bottom-tabs": "^6.5.3",
     "@react-navigation/native": "^6.1.2",
     "@react-navigation/native-stack": "^6.9.8",
     "axios": "^1.2.3",
