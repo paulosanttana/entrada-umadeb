@@ -1,4 +1,6 @@
 # entrada-umadeb
+
 Contador entrada UMADEB
 
-Aplicativo para contabilizar entrada no pavilhão, UMADEB 2023.
+1. Aplicativo para contabilizar entrada no pavilhão, UMADEB 2023.
+2. Leitor QR Code para alimentação
