@@ -20,7 +20,7 @@ export function TabRoutes() {
         component={Home}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <MaterialIcons name="home" color={color} size={size} />
+            <MaterialIcons name="home" color={color} size={30} />
           ),
         }}
       />
@@ -30,7 +30,7 @@ export function TabRoutes() {
         component={Qrcode}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <MaterialIcons name="qr-code" color={color} size={size} />
+            <MaterialIcons name="qr-code" color={color} size={30} />
           ),
         }}
       />

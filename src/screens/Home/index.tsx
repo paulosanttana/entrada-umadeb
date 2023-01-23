@@ -6,6 +6,7 @@ import { api } from "../../services/api";
 import { DATAZERO } from "../../utils/constantes";
 import { useNavigation } from "@react-navigation/native";
 import { dataAtualFormatada, formatDateSelect } from "../../utils/format";
+import { MaterialIcons } from "@expo/vector-icons";
 
 export interface Event {
   Ativo: boolean | undefined;
@@ -67,16 +68,18 @@ export function Home() {
   return (
     <View style={styles.container}>
       {/* <Button title="Leitor QR Code" onPress={openScreen} /> */}
-      <Text style={styles.txtType}>ENTRADA</Text>
-      <Text
-        style={styles.txtUmadeb}
-      >{`Congresso Geral da UMADEB 2022 ${eventoPrincipal}`}</Text>
+      <View style={styles.title}>
+        <Text style={styles.txtType}>ENTRADA</Text>
+        <Text
+          style={styles.txtUmadeb}
+        >{`Congresso Geral da UMADEB 2022 ${eventoPrincipal}`}</Text>
+      </View>
       <View
         style={{
           borderWidth: 2,
           borderColor: "#00337C",
           borderRadius: 4,
-          marginTop: 20,
+          marginTop: 15,
         }}
       >
         <Picker
@@ -108,7 +111,8 @@ export function Home() {
           style={styles.buttonCount}
           onPress={handleParticipantAdd}
         >
-          <Text style={styles.buttonTxt}>+</Text>
+          {/* <Text style={styles.buttonTxt}>+</Text> */}
+          <MaterialIcons name="check-circle" size={95} />
         </TouchableOpacity>
       </View>
     </View>
